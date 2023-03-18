@@ -1,4 +1,4 @@
-import { motion, AnimatePresence, animate } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import FeedbackItem from "./FeedbackItem";
 import { useContext } from "react";
 import FeedbackContext from "../context/FeedbackContext";
