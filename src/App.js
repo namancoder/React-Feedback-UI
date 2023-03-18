@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
 import FeedbackForm from "./components/FeedbackForm";
 import FeedbackList from "./components/FeedbackList";
 import FeedbackStats from "./components/FeedbackStats";
@@ -24,6 +29,7 @@ function App() {
               }
             />
             <Route path='/about' Component={AboutPages} />
+            <Route path='*' element={<Navigate to='/about' />} />
           </Routes>
         </div>
         <AboutIconLink />
