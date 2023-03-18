@@ -3,6 +3,8 @@
 
 Simple client side app covering many fundamentals of React.
 
+## Features
+- CRUD for Feedbacks
 
 ## Learnings from the App
 - Using Wrapper Components like Card for each feedback
