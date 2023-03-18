@@ -19,22 +19,24 @@ function FeedbackForm() {
     }
   }, [feedbackEdit]);
   const handleTextChange = (e) => {
-    if (!text) {
+    const val = e.target.value;
+    if (val === "") {
       setBtnDisabled(true);
       setMessage(null);
-    } else if (text && text.trim().length < 10) {
+    } else if (val && val.trim().length < 10) {
+      console.log(val);
       setMessage("Text must be atleast 10 characters");
       setBtnDisabled(true);
     } else {
       setBtnDisabled(false);
       setMessage(null);
     }
-    setText(e.target.value);
+    setText(val);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (text.trim().length > 10) {
+    if (text.trim().length >= 10) {
       const newFeedback = {
         text: text,
         rating: rating,
