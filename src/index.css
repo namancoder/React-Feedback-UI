@@ -11,6 +11,9 @@ body {
   background-color: #202142;
   color: #fff;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
@@ -52,10 +55,6 @@ header {
   text-align: center;
 }
 
-.card.reverse {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
-}
 .rating {
   display: flex;
   align-items: center;
@@ -189,15 +188,13 @@ input:focus {
   color: rebeccapurple;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
 .about-link {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-self: center;
+  margin-top: auto;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
 .about-link a {
   color: #fff;
   cursor: pointer;
